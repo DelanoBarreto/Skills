@@ -1,0 +1,27 @@
+{
+  "name": "claude-skills-pt",
+  "description": "Skills em português para Claude Code — 18 skills PT-BR: frontend, backend, supabase, debug, revisão e mais",
+  "version": "1.0.0",
+  "author": "Delano Lesko",
+  "license": "MIT",
+  "skills": [
+    "./skills-pt/ajuda",
+    "./skills-pt/roteador",
+    "./skills-pt/planejamento",
+    "./skills-pt/frontend",
+    "./skills-pt/backend",
+    "./skills-pt/banco-de-dados",
+    "./skills-pt/supabase",
+    "./skills-pt/debug",
+    "./skills-pt/revisao",
+    "./skills-pt/seguranca",
+    "./skills-pt/testes",
+    "./skills-pt/performance",
+    "./skills-pt/arquitetura",
+    "./skills-pt/design",
+    "./skills-pt/documentacao",
+    "./skills-pt/github-ci",
+    "./skills-pt/mcp",
+    "./skills-pt/qa-automacao"
+  ]
+}
