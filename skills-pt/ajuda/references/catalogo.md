@@ -13,6 +13,7 @@ Dar uma entrada unica em portugues para entender e acionar o conjunto de skills 
 | `planejamento` | Decompor trabalho, definir escopo, ordem, riscos e entregaveis | `project-planner` |
 | `debug` | Investigar erro, reproduzir bug, achar causa raiz e validar correcao | `debugger` |
 | `design` | Definir layout, fluxo, visual e decisoes de UI/UX | `frontend-specialist` + `frontend-design` |
+| `ui-ux-pro-max` | Design executavel com estilos, paletas, fontes e componentes prontos | `frontend-specialist` (avancado) |
 | `frontend` | Trabalhar em React, Next.js, componentes e tela | `frontend-specialist` |
 | `backend` | API, servicos, integracoes e regra de negocio no servidor | `backend-specialist` |
 | `banco-de-dados` | Modelagem, SQL, migracoes, indices e relacoes | `database-architect` |
@@ -26,6 +27,19 @@ Dar uma entrada unica em portugues para entender e acionar o conjunto de skills 
 | `revisao` | Revisar codigo, risco, clareza e regressao antes de enviar | `code-review-checklist` |
 | `qa-automacao` | Validar fluxos no navegador e automatizar E2E | `qa-automation-engineer` + `webapp-testing` |
 | `mcp` | Criar, adaptar ou entender integrações MCP e ferramentas | `mcp-builder` |
+| `code-review` | Review especializado com fixes e simplificacoes inline | `code-reviewer` |
+| `security-review` | Audit profundo de vulnerabilidades e OWASP | `security-auditor` (avancado) |
+| `verify` | Testar que mudancas funcionam de verdade no app | `qa-automation-engineer` |
+| `run` | Iniciar, rodar e debugar a aplicacao localmente | `backend-specialist` + `frontend-specialist` |
+| `simplify` | Simplificar codigo com reuse e eficiencia | `code-archaeologist` |
+| `init` | Inicializar CLAUDE.md e documentacao do projeto | `documentation-writer` |
+| `review` | Revisar PR no GitHub (comentarios e checklist) | `code-reviewer` |
+| `loop` | Executar tarefa em intervalo recorrente (polling) | Interno |
+| `schedule` | Agendar rotinas com cron (agentes em background) | Interno |
+| `update-config` | Configurar permissoes, settings.json e variaveis | Interno |
+| `keybindings-help` | Customizar atalhos de teclado (~/.claude/keybindings.json) | Interno |
+| `fewer-permission-prompts` | Reduzir prompts de permissao com allowlist | Interno |
+| `claude-api` | Referencia de modelos, pricing, params e tool-use da Claude API | Referencia |
 
 ## Como escolher
 
