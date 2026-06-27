@@ -1,104 +1,160 @@
 # Skills PT-BR — Claude Code + Codex
 
-**20 skills em português para usar no Claude Code e no Codex.**  
-Criado por Delano Lesko | Licença MIT
+Skills em português para usar no **Claude Code** e no **Codex**, sincronizadas entre múltiplos computadores.
+
+Criado por Delano Barreto | Licença MIT
 
 ---
 
-## Instalação Rápida (1 comando)
+## Instalação em um Novo Computador
 
-### Claude Code
 ```powershell
-npx skills add https://github.com/DelanoBarreto/Skills.git
+# 1. Clone o repositório
+git clone https://github.com/DelanoBarreto/Skills.git
+
+# 2. Rode o script de instalação (instala tudo de uma vez)
+cd Skills
+.\setup.ps1
 ```
 
-### Novo computador — instalar tudo de uma vez
-```powershell
-powershell -ExecutionPolicy Bypass -File setup-skills.ps1
-```
+O script instala:
+
+- Plugins do Claude Code (superpowers, karpathy, supabase, etc.)
+- Skills PT-BR no Claude Code (`~\.agents\skills\`)
+- Skills PT-BR no Codex (`~\.codex\skills\`)
 
 ---
 
-## Skills Disponíveis (20 no total)
+## Plugins do Claude Code
 
-| Skill | Como chamar | O que faz |
-|-------|-------------|-----------|
-| Ajuda | `/ajuda` | Catálogo completo — começa aqui! |
-| Roteador | `/roteador` | Não sabe qual skill usar? Use esta |
-| Planejamento | `/planejamento` | Organizar tarefas em fases |
+Instalados automaticamente pelo `setup.ps1`. Para instalar manualmente:
+
+```powershell
+npx skills add superpowers@claude-plugins-official -g -y
+npx skills add github@claude-plugins-official -g -y
+npx skills add supabase@claude-plugins-official -g -y
+npx skills add claude-md-management@claude-plugins-official -g -y
+npx skills add frontend-design@claude-plugins-official -g -y
+npx skills add skill-creator@claude-plugins-official -g -y
+npx skills add andrej-karpathy-skills@karpathy-skills --marketplace https://github.com/multica-ai/andrej-karpathy-skills.git -g -y
+```
+
+> Plugins ficam em `~\.claude\plugins\` e são gerenciados automaticamente. Não edite manualmente.
+
+---
+
+## Skills PT-BR — Claude Code
+
+Disponíveis em qualquer projeto via `/nome-da-skill`.
+
+| Skill | Comando | O que faz |
+| -- | -- | -- |
+| Ajuda | `/ajuda` | Menu principal — não sabe qual skill usar? Comece aqui |
+| Arquitetura | `/arquitetura` | Estrutura, módulos e design do sistema |
+| Backend | `/backend` | APIs, serviços e regras de negócio |
+| Banco de Dados | `/banco-de-dados` | Schema, SQL, migrations, modelagem |
 | Debug | `/debug` | Investigar bugs e erros |
 | Design | `/design` | Layout, visual e UX |
+| Documentação | `/documentacao` | README, guias, specs técnicas |
 | Frontend | `/frontend` | React, Next.js, componentes |
-| Backend | `/backend` | APIs, serviços e regra de negócio |
-| Banco de Dados | `/banco-de-dados` | Schema, SQL, migrations |
-| Supabase | `/supabase` | Auth, RLS, policies, storage |
-| Testes | `/testes` | Testes unitários, integração, E2E |
 | GitHub CI | `/github-ci` | PRs, Actions, CI/CD |
-| Revisão | `/revisao` | Revisar código antes de enviar |
-| Segurança | `/seguranca` | Vulnerabilidades e OWASP |
-| Performance | `/performance` | Otimização e velocidade |
-| Arquitetura | `/arquitetura` | Estrutura e módulos do sistema |
-| Documentação | `/documentacao` | README, guias, specs |
-| QA Automação | `/qa-automacao` | Playwright, Cypress, E2E |
+| Guia | `/guia` | Guia interativo de uso das skills |
 | MCP | `/mcp` | Integrações Model Context Protocol |
-| Guia | `/guia` | Guia interativo de uso |
+| Performance | `/performance` | Otimização e velocidade |
+| Planejamento | `/planejamento` | Organizar tarefas em fases |
+| QA Automação | `/qa-automacao` | Playwright, Cypress, testes E2E |
+| Revisão | `/revisao` | Revisar código antes de commitar |
+| Roteador | `/roteador` | Roteamento inteligente de skills |
+| Segurança | `/seguranca` | Vulnerabilidades e OWASP |
+| Supabase | `/supabase` | Auth, RLS, policies, storage |
+| Testes | `/testes` | Testes unitários e integração |
 | Teste Exemplo | `/teste-exemplo` | Exemplo de estrutura de skill |
 
 ---
 
-## Dois Computadores? Sem Problema
+## Skills PT-BR — Codex
 
-O repositório é a fonte única da verdade. Em cada máquina:
+Disponíveis via `\nome-da-skill` no Codex.
 
-```powershell
-# 1. Clonar (só na primeira vez)
-git clone https://github.com/DelanoBarreto/Skills.git
-
-# 2. Instalar skills
-npx skills add https://github.com/DelanoBarreto/Skills.git
-```
-
-Ao atualizar uma skill, faça `git pull` no repo e reinstale.
+| Skill | Comando | O que faz |
+|-------|---------|-----------|
+| Ajuda | `\ajuda` | Menu principal de skills |
+| Backend API | `\backend-api` | Endpoints, contratos de API |
+| Banco de Dados | `\banco-de-dados` | Modelagem e persistência |
+| Criador de Skills | `\criador-de-skills` | Criar e adaptar skills |
+| Curto | `\curto` | Respostas curtas e diretas |
+| Deploy | `\deploy` | Preparar entrega em produção |
+| Depuração | `\depuracao` | Investigar bugs e causa raiz |
+| Design Sistema | `\design-sistema` | Guia visual, paleta, tipografia |
+| Documentação | `\documentacao` | README e docs técnicos |
+| Economia de Tokens | `\economia-tokens` | Reduzir verbosidade |
+| Frontend | `\frontend` | Telas, componentes, Next.js |
+| HIG | `\hig` | Padrões de interface Apple |
+| Hosting | `\hosting` | Hospedagem e domínio |
+| Infra | `\infra` | Servidores e operação |
+| Planejamento | `\planejamento` | Plano de execução e etapas |
+| Publicar VPS | `\publicar-vps` | Deploy em VPS com Nginx |
+| Python Dados | `\python-dados` | Automação, CSV, Excel, PDF |
+| Skills | `\skills` | Lista de skills instaladas |
+| Skills Router | `\skills-router` | Roteamento de skills |
+| Supabase | `\supabase` | Banco, auth, policies |
+| Testes | `\testes` | Testes unitários e integração |
 
 ---
 
 ## Estrutura do Repositório
 
-```
+```text
 Skills/
-├── skills-pt/                   ← 20 skills em português
-│   ├── ajuda/SKILL.md
-│   ├── planejamento/SKILL.md
-│   ├── frontend/SKILL.md
-│   └── ... (17 mais)
-├── .claude-plugin/
-│   └── plugin.json              ← Configuração para npx install
-├── docs/
-│   ├── CATALOGO-COMPLETO.md     ← Lista detalhada de todas as skills
-│   ├── QUICK-REFERENCE.md       ← Referência rápida de comandos
-│   ├── SKILL-WORKFLOW.md        ← Fluxo de uso das skills
-│   └── CHECKLIST.md             ← Checklist de boas práticas
-├── setup-skills.ps1             ← Script de instalação Windows
-├── GUIA-SKILLS.md               ← Guia completo para iniciantes
-└── README.md                    ← Este arquivo
+├── claude/          ← Skills para Claude Code (~\.agents\skills\)
+│   ├── ajuda/
+│   ├── backend/
+│   └── ... (20 skills)
+├── codex/           ← Skills para Codex (~\.codex\skills\)
+│   ├── ajuda/
+│   ├── backend-api/
+│   └── ... (20 skills)
+├── docs/            ← Documentação e análises
+├── setup.ps1        ← Script de instalação (roda uma vez por computador)
+├── GUIA-SKILLS.md   ← Guia detalhado
+└── README.md        ← Este arquivo
 ```
 
 ---
 
-## Criar uma Skill Nova
+## Trabalhando em 2 Computadores
 
-```
-skills-pt/
-    minha-skill/
-        SKILL.md        ← obrigatório
-        references/     ← opcional (arquivos de apoio)
+```powershell
+# Atualizar skills depois de git pull
+git pull
+.\setup.ps1
 ```
 
-**Formato do SKILL.md:**
+Depois de criar ou editar uma skill:
+
+```powershell
+git add .
+git commit -m "feat: add/update skill-name"
+git push
+```
+
+No outro computador:
+
+```powershell
+git pull
+.\setup.ps1
+```
+
+---
+
+## Criar uma Nova Skill
+
+**Para Claude** — crie em `claude/minha-skill/SKILL.md`:
+
 ```markdown
 ---
 name: minha-skill
-description: O que esta skill faz em uma linha
+description: Use quando o usuário digitar /minha-skill ou pedir [descreva o caso].
 ---
 
 # Minha Skill
@@ -107,53 +163,27 @@ description: O que esta skill faz em uma linha
 - Cenário 1
 - Cenário 2
 
-## Como usar
+## Como funciona
 1. Passo 1
 2. Passo 2
 ```
 
-**Commit e publicar:**
-```bash
-git add .
-git commit -m "feat(skills): add minha-skill"
-git push
-```
+**Para Codex** — mesma estrutura em `codex/minha-skill/SKILL.md`, mas use `\minha-skill` na descrição.
 
----
-
-## Claude Code vs Codex
-
-| | Claude Code | Codex |
-|--|-------------|-------|
-| Pasta de skills | `.claude/skills/` | `.agent/skills/` |
-| Instalar via npx | ✅ `npx skills add` | via CLI próprio |
-| Plugin | `.claude-plugin/` | sistema diferente |
-
-As skills deste repositório foram criadas para **Claude Code**.  
-Para usar no Codex, copie a pasta `skills-pt/` para `.agent/skills/` no seu projeto.
-
----
-
-## Plugins Externos Recomendados
-
-Instale também estes plugins da comunidade:
-
-```powershell
-# Design avançado com 50+ estilos
-npx skills add https://github.com/FontAI/ui-ux-pro-max-skill --skill ui-ux-pro-max
-
-# Boas práticas de código (Andrej Karpathy)
-npx skills add https://github.com/andrejkarpathy/karpathy-skills --skill karpathy-guidelines
-```
+Depois rode `.\setup.ps1` para instalar localmente e faça `git push` para sincronizar.
 
 ---
 
 ## Não sabe por onde começar?
 
-Abra o Claude Code no VS Code e digite:
+No Claude Code:
 
-```
+```text
 /ajuda
 ```
 
-O catálogo vai te guiar para a skill certa.
+No Codex:
+
+```text
+\ajuda
+```
