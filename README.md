@@ -28,7 +28,7 @@ Se uma skill precisa existir no outro computador, ela deve estar em uma dessas d
 ## Estado atual
 
 - `claude/`: 37 skills
-- `codex/`: 35 skills
+- `codex/`: 42 skills
 
 ### Skills em `claude/`
 
@@ -75,13 +75,17 @@ writing-skills
 ### Skills em `codex/`
 
 ```text
+admin
 apple-hig
+auth
 backend-api
 banco-de-dados
 brand-guidelines
 caveman
 caveman-compress
 color-expert
+compliance
+contratos
 criador-de-skills
 curto
 deploy
@@ -98,10 +102,13 @@ hosting
 impeccable-design-polish
 infra
 juridico
+migracoes
 ocr
+pdf-documentos
 planejamento
 playwright
 playwright-interactive
+portalgov-system
 publicar-vps
 python-dados
 shadcn-ui
