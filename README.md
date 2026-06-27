@@ -1,4 +1,4 @@
-# Skills PT-BR for Claude Code and Codex
+﻿# Skills PT-BR for Claude Code and Codex
 
 Repositorio para sincronizar skills entre computadores.
 
@@ -118,11 +118,7 @@ web-design-guidelines
 Skills/
 |-- claude/
 |-- codex/
-|-- docs/
 |-- setup.ps1
-|-- setup-skills.ps1
-|-- GUIA-RAPIDO.md
-|-- GUIA-SKILLS.md
 `-- README.md
 ```
 
@@ -137,5 +133,6 @@ git pull
 
 1. Atualize as skills em `claude/` e `codex/`
 2. Rode `.\setup.ps1` localmente se quiser validar
-3. Faça `git add`, `git commit` e `git push`
+3. Faca `git add`, `git commit` e `git push`
 4. No outro computador, rode `git pull` e `.\setup.ps1`
+
