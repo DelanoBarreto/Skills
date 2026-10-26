@@ -24,7 +24,11 @@ Formato: `Projeto/branch | Tarefa | Feito | Arquivos/commit | Testes | Próximo`
 
 **VPS | Domínios | RISCO ABERTO | PortalGov, TestePortalGov, ASPdoc, admin, aracati, fortaleza usam `*.iflexus.com.br` (expirado; NS em dns-parking). Em 25/10 ainda respondiam (aracati/admin com falhas intermitentes) | Próximo: decidir migração para `iflexus.cloud`**
 
-Plano completo e checklist: `PLANO-E-CHECKLIST-VPS.md` (repositório local Administracao-VPS).
+**VPS/Coolify | Acesso do agente ao Coolify via API | PARADO NO ÚLTIMO PASSO (26/10) | API Access ligado no Coolify com Allowed IPs `72.61.46.4,172.16.0.0/12,10.0.0.0/8` (API responde 401 sem token). `/root/.coolify-token` ainda NÃO existe | Próximo: o responsável cria o token (read, write, deploy; 30 dias) e o guarda na VPS sem passar pelo chat; depois migrar `testeportalgov.iflexus.cloud` (DNS já criado e resolvendo) no app TestePortalGov e ajustar `LEGACY_HOST`**
+
+**DNS | iflexus.cloud | Feito | Registro A `testeportalgov` → 72.61.46.4 criado e resolvendo | Próximo: mover DNS para a Cloudflare; R2 para arquivos**
+
+Plano completo e checklist: `PLANO-E-CHECKLIST-VPS.md` e `ONDE-PARAMOS.md` (repositório local Administracao-VPS).
 
 ---
 *Gerado por sessão Claude Code (Sonnet 5), autorizado por Delano Barreto. Nenhuma credencial, senha ou chave privada incluída neste documento.*
